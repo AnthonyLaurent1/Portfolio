@@ -29,7 +29,7 @@ class ContactController extends AbstractController
         $users = $managerRegistry->getRepository(User::class)->findAll();
         return $this->renderForm('contact/index.html.twig', [
             'form' => $form,
-            'user' => $users,
+            'users' => $users,
         ]);
     }
 

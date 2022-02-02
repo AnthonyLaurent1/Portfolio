@@ -1,0 +1,32 @@
+<nav class="mt-5">
+    <ul class="d-flex justify-content-evenly text-white">
+        <a class="text-white" href="{{ path('home') }}">
+            <li>Acceuil</li>
+        </a>
+        <a class="text-white" href="{{ path('presentation') }}">
+            <li>Présentation</li>
+        </a>
+        <a class="text-white" href="{{ path('skill') }}">
+            <li>Compétences</li>
+        </a>
+        <a class="text-white" href="{{ path('project') }}">
+            <li>Projets</li>
+        </a>
+        <a class="text-white" href="{{ path('contact') }}">
+            <li>Contact</li>
+        </a>
+        {% if app.user %}
+            <a class="text-white" href="{{ path('admin') }}">
+                <li>Ajouter/Modifier</li>
+            </a>
+            <a class="text-white" href="{{ path('logout') }}">
+                <li><i class="fas fa-sign-out-alt"></i></li>
+            </a>
+        {% else %}
+            <a class="text-white" href="{{ path('login') }}">
+                <li>Admin</li>
+            </a>
+        {% endif %}
+    </ul>
+</nav>
+

@@ -17,6 +17,7 @@ class UserFixtures extends Fixture
             'roles' => ['ROLE_ADMIN'],
             'password' => 'anthony33',
             'age' => '23',
+            'phone' => '0633466044',
             ]
         ];
     private UserPasswordHasherInterface $passwordHasher;
@@ -36,6 +37,7 @@ class UserFixtures extends Fixture
             $user->setLastname($data['lastname']);
             $user->setRoles($data['roles']);
             $user->setAge($data['age']);
+            $user->setPhone($data['phone']);
             $hashedPassword = $this->passwordHasher->hashPassword(
                 $user,
                 $data['password'],

@@ -3,22 +3,29 @@
 {% block title %}Contact{% endblock %}
 
 {% block body %}
-    <a href="{{ path('home') }}"><i class="fas fa-arrow-circle-left display-5 text-white ms-5"></i></a>
-    <h1 class="text-white text-center mt-5 display-5">Contact</h1>
-    <div class="container d-flex ">
-        <div class="col-lg-4 mt-5 border-end pe-5">
-            {{ form_start(form) }}
-            {{ form_row(form.lastname) }}
-            {{ form_row(form.firstname) }}
-            {{ form_row(form.email) }}
-            {{ form_row(form.message) }}
-            <button class="d-flex bg-white justify-content-center btn rounded-pill color-h3 p-2 col-sm-10 col-md-6 col-lg-3 shadow-none mx-auto">
-                Envoyer
-            </button>
-            {{ form_end(form) }}
-        </div>
-        <div>
-
+    <div class="container">
+        <h1 class="text-white text-center mt-5 pt-5 display-2">Contact</h1>
+        <div class="d-flex mt-5 flex-wrap justify-content-center ">
+            <div class="col-lg-6 mt-5 border-end pe-5">
+                {{ form_start(form) }}
+                {{ form_row(form.lastname) }}
+                {{ form_row(form.firstname) }}
+                {{ form_row(form.email) }}
+                {{ form_row(form.message) }}
+                <button class="d-flex bg-white justify-content-center btn rounded-pill color-h3 p-2 col-sm-10 col-md-6 col-lg-3 shadow-none mx-auto">
+                    Envoyer
+                </button>
+                {{ form_end(form) }}
+            </div>
+            <div class="text-white col-lg-6">
+                <h2 class="text-center display-5 mt-5 pt-5">Autres contact</h2>
+                {% for user in users  %}
+                    <div class="text-center mt-5 fw-bold">
+                        <p>Tel : {{ user.phone }}</p>
+                        <p>Email : {{ user.email }}</p>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 {% endblock %}
