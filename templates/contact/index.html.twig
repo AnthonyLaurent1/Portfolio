@@ -1,20 +1,24 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ContactController!{% endblock %}
+{% block title %}Contact{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <a href="{{ path('home') }}"><i class="fas fa-arrow-circle-left display-5 text-white ms-5"></i></a>
+    <h1 class="text-white text-center mt-5 display-5">Contact</h1>
+    <div class="container d-flex ">
+        <div class="col-lg-4 mt-5 border-end pe-5">
+            {{ form_start(form) }}
+            {{ form_row(form.lastname) }}
+            {{ form_row(form.firstname) }}
+            {{ form_row(form.email) }}
+            {{ form_row(form.message) }}
+            <button class="d-flex bg-white justify-content-center btn rounded-pill color-h3 p-2 col-sm-10 col-md-6 col-lg-3 shadow-none mx-auto">
+                Envoyer
+            </button>
+            {{ form_end(form) }}
+        </div>
+        <div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/anthony/portfolio/src/Controller/ContactController.php'|file_link(0) }}">src/Controller/ContactController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/anthony/portfolio/templates/contact/index.html.twig'|file_link(0) }}">templates/contact/index.html.twig</a></code></li>
-    </ul>
-</div>
+        </div>
+    </div>
 {% endblock %}

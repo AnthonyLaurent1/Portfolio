@@ -3,5 +3,17 @@
 {% block title %}Compétences{% endblock %}
 
 {% block body %}
-
+    <a href="{{ path('home') }}"><i class="fas fa-arrow-circle-left display-5 text-white ms-5"></i></a>
+    <div class="container">
+        <h1 class="text-center text-white mt-5 display-5">Mes compétences</h1>
+        <div class="mt-5 pt-5 ">
+            <img src="{{ asset('build/images/html.png') }}" alt="html">
+            <img src="{{ asset('build/images/css.png') }}" alt="css">
+            <img src="{{ asset('build/images/js.png') }}" alt="js">
+            <img src="{{ asset('build/images/mysql.png') }}" alt="mysql">
+            <img src="{{ asset('build/images/git.png') }}" alt="git">
+            <img src="{{ asset('build/images/react.png') }}" alt="react">
+        </div>
+        {{ render_chart(chart) }}
+    </div>
 {% endblock %}

@@ -20,7 +20,7 @@ class ProjectFixtures extends Fixture implements DependentFixtureInterface
         ],
         'Fullbus' => [
             'description' => "Compléter les trajets à vide des compagnies d’autocars en offrant aux
-                              voyageurs une nouvelle façon de voyager, plus économique et plus responsable.
+                              voyageurs une nouvelle façon de voyager.
                               Développé en Symfony, JavaScript, Bootstrap et utilisation de méthodes agiles.",
             'category' => 'category_0',
             'url' => 'https://fullbus.harari.ovh/ ',
