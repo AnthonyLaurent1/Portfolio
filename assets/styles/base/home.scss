@@ -1,0 +1,16 @@
+body {
+  background-color: $primary;
+}
+
+.color-h3 {
+  color: $primary;
+}
+
+.color-h3:hover {
+  color: $primary;
+}
+
+.zoom:hover {
+  transition: transform 1s;
+  transform: scale(1.2);
+}
