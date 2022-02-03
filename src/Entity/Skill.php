@@ -37,6 +37,7 @@ class Skill
      */
     private $updatedAt;
 
+
     public function getId(): ?int
     {
         return $this->id;

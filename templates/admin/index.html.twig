@@ -1,20 +1,35 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AdminController!{% endblock %}
+{% block title %}Admin{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/anthony/portfolio/src/Controller/AdminController.php'|file_link(0) }}">src/Controller/AdminController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/anthony/portfolio/templates/admin/index.html.twig'|file_link(0) }}">templates/admin/index.html.twig</a></code></li>
-    </ul>
+<div class="container">
+    <h1 class="text-white text-center mt-5 pt-5 display-2">Ajouter de nouvelles données</h1>
+    <div class="d-flex mt-5 flex-wrap justify-content-center ">
+        <div class="col-lg-6 mt-5 border-end pe-5">
+            <h2 class="text-white text-center fw-light">Projet</h2>
+            {{ form_start(project_form) }}
+            {{ form_row(project_form.name) }}
+            {{ form_row(project_form.description) }}
+            {{ form_row(project_form.url) }}
+            {{ form_row(project_form.linkGitHub) }}
+            {{ form_row(project_form.category) }}
+            <button class="d-flex bg-white justify-content-center btn rounded-pill color-h3 p-2 col-sm-10 col-md-6 col-lg-3 shadow-none mx-auto">
+                Ajouter
+            </button>
+            {{ form_end(project_form) }}
+        </div>
+        <div class="col-lg-6 mt-5 ps-5">
+            <h2 class="text-white text-center fw-light">Compétences</h2>
+            {{ form_start(skill_form) }}
+            {{ form_row(skill_form.techno) }}
+            {{ form_row(skill_form.level) }}
+            <button class="d-flex bg-white justify-content-center btn rounded-pill color-h3 p-2 col-sm-10 col-md-6 col-lg-3 shadow-none mx-auto">
+                Ajouter
+            </button>
+            {{ form_end(skill_form) }}
+        </div>
+    </div>
 </div>
+
 {% endblock %}
