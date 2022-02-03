@@ -15,7 +15,18 @@
     {% endblock %}
 </head>
 <body>
-{% include 'components/_navbar.html.twig' %}
+{% if app.request.pathInfo == '/' %}
+    {% include 'components/_navbarHome.html.twig' %}
+{% else %}
+    {% include 'components/_navbar.html.twig' %}
+{% endif %}
+{% for label, messages in app.flashes %}
+    {% for message in messages %}
+        <div class="flash-{{ label }} text-center text-white mt-5">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endfor %}
 {% block body %}{% endblock %}
 </body>
 </html>

@@ -15,10 +15,10 @@ class PresentationController extends AbstractController
      */
     public function index(ManagerRegistry $managerRegistry): Response
     {
-        $user = $managerRegistry->getRepository(User::class)->findAll();
+        $users = $managerRegistry->getRepository(User::class)->findAll();
 
         return $this->render('presentation/index.html.twig', [
-            'user' => $user,
+            'users' => $users,
         ]);
     }
 }

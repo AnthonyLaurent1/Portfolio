@@ -4,18 +4,18 @@
 
 {% block body %}
     <div class="container">
-        <h1 class="text-center text-white mt-5 pt-5 display-2">Mes compétences</h1>
+        <h1 class="text-center text-white mt-5 display-2">Mes compétences</h1>
         <div>
             {% for skill in skills %}
                 <div class="m-1 text-white">
                     <p class="fs-5 fw-light">{{ skill.techno }}</p>
                     <div class="progress height">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:{{ skill.level }}%" role="progressbar"
+                        <div class="progress-bar" style="width:{{ skill.level }}%" role="progressbar"
                              aria-valuenow="{{ skill.level }}" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
             {% endfor %}
-            <div class="mt-5 pt-5 d-flex flex-wrap justify-content-evenly">
+            <div class="mt-5 pt-3 d-flex flex-wrap justify-content-evenly">
                 <img src="{{ asset('build/images/php.png') }}" width="200px" height="100px" alt="php">
                 <img src="{{ asset('build/images/js.png') }}" width="100px" height="100px" alt="js">
                 <img src="{{ asset('build/images/mysql.png') }}" width="500px" height="100px" alt="mysql">

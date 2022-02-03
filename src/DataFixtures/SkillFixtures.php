@@ -26,13 +26,19 @@ class SkillFixtures extends Fixture
             'level' => '20',
         ],
         'Git' => [
-            'level' => '80',
+            'level' => '70',
+        ],
+        'GitHub' => [
+            'level' => '70',
         ],
         'CSS' => [
             'level' => '70',
         ],
         'HTML' => [
             'level' => '80',
+        ],
+        'PhpStorm' => [
+            'level' => '60',
         ],
     ];
 

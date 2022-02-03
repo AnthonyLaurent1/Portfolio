@@ -1,0 +1,17 @@
+
+<nav class="mt-5">
+    <ul class="d-flex justify-content-end me-5 pe-5">
+        {% if app.user %}
+            <a class="text-white me-5" href="{{ path('admin') }}">
+                <li>Ajouter/Modifier</li>
+            </a>
+            <a class="text-white" href="{{ path('logout') }}">
+                <li><i class="fas fa-sign-out-alt"></i></li>
+            </a>
+        {% else %}
+            <a class="text-white" href="{{ path('login') }}">
+                <li>Admin</li>
+            </a>
+        {% endif %}
+    </ul>
+</nav>

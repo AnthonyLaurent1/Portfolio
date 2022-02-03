@@ -11,6 +11,7 @@ class CategoryFixtures extends Fixture
     public const CATEGORIES = [
         'Service et réservations',
         'Evenementiel',
+        'E-commerce',
     ];
     public function load(ObjectManager $manager): void
     {

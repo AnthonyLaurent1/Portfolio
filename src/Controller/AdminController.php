@@ -29,6 +29,7 @@ class AdminController extends AbstractController
             $project->setUpdatedAt(new DateTime());
             $manager->persist($project);
             $manager->flush();
+            $this->addFlash('success', 'Votre projet à bien été ajouté');
             return $this->redirectToRoute('project');
         }
         $skill = new Skill();
@@ -39,6 +40,7 @@ class AdminController extends AbstractController
             $skill->setUpdatedAt(new DateTime());
             $manager->persist($skill);
             $manager->flush();
+            $this->addFlash('success', 'Votre compétence à bien été ajouté');
             return $this->redirectToRoute('skill');
         }
         return $this->renderForm('admin/index.html.twig', [
