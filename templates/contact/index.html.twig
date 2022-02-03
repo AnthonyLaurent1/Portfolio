@@ -20,9 +20,11 @@
             <div class="text-white col-lg-6">
                 <h2 class="text-center display-5 mt-5 pt-5 fw-light">Autres contact</h2>
                 {% for user in users  %}
-                    <div class="text-center mt-5 fw-bold">
+                    <div class="text-center mt-4 fw-bold">
                         <p>Tel : {{ user.phone }}</p>
                         <p>Email : {{ user.email }}</p>
+                        <a class="text-white display-5 me-3" href="{{ user.linkedin }}"><i class="fab fa-linkedin"></i></a>
+                        <a class="text-white display-5" href="{{ user.github }}"><i class="fab fa-github"></i></a>
                     </div>
                 {% endfor %}
             </div>

@@ -18,6 +18,8 @@ class UserFixtures extends Fixture
             'password' => 'anthony33',
             'age' => '23',
             'phone' => '0633466044',
+            'linkedin' => 'https://www.linkedin.com/in/anthony-laurent-160a8621b/',
+            'github' => 'https://github.com/AnthonyLaurent1',
             ]
         ];
     private UserPasswordHasherInterface $passwordHasher;
@@ -38,6 +40,8 @@ class UserFixtures extends Fixture
             $user->setRoles($data['roles']);
             $user->setAge($data['age']);
             $user->setPhone($data['phone']);
+            $user->setLinkedin($data['linkedin']);
+            $user->setGithub($data['github']);
             $hashedPassword = $this->passwordHasher->hashPassword(
                 $user,
                 $data['password'],

@@ -66,6 +66,16 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $phone;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $linkedin;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $github;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -224,6 +234,30 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setPhone(string $phone): self
     {
         $this->phone = $phone;
+
+        return $this;
+    }
+
+    public function getLinkedin(): ?string
+    {
+        return $this->linkedin;
+    }
+
+    public function setLinkedin(string $linkedin): self
+    {
+        $this->linkedin = $linkedin;
+
+        return $this;
+    }
+
+    public function getGithub(): ?string
+    {
+        return $this->github;
+    }
+
+    public function setGithub(string $github): self
+    {
+        $this->github = $github;
 
         return $this;
     }

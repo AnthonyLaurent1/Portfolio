@@ -40,6 +40,9 @@ class SkillFixtures extends Fixture
         'PhpStorm' => [
             'level' => '60',
         ],
+        'Bootstrap' => [
+            'level' => '70',
+        ],
     ];
 
     public function load(ObjectManager $manager): void
