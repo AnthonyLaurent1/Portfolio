@@ -7,6 +7,10 @@
         <h1 class="text-center text-white mt-5 display-2">Mes compétences</h1>
         {% for skill in skills %}
             <div class="m-1 text-white">
+                {% if app.user %}
+                    <a class="d-flex text-white justify-content-end" href="{{ path('edit_skill', { skill: skill.id }) }}">Modifier</a>
+                    <a class="d-flex text-white justify-content-end" href="{{ path('remove_skill', { skill: skill.id }) }}">Supprimer</a>
+                {% endif %}
                 <p class="fs-5 fw-light">{{ skill.techno }}</p>
                 <div class="progress height">
                     <div class="progress-bar" style="width:{{ skill.level }}%" role="progressbar"

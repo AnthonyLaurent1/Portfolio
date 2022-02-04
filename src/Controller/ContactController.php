@@ -42,5 +42,4 @@ class ContactController extends AbstractController
             'users' => $users,
         ]);
     }
-
 }

@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin/Modifier{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="text-white text-center mt-5 pt-5 display-2">Modifié un projet</h1>
+        <div class="d-flex mt-5 flex-wrap justify-content-center ">
+            <div class="col-lg-6 mt-5 pe-5">
+                <h2 class="text-white text-center fw-light">Projet</h2>
+                {{ form_start(project_form) }}
+                {{ form_row(project_form.name) }}
+                {{ form_row(project_form.description) }}
+                {{ form_row(project_form.url) }}
+                {{ form_row(project_form.linkGitHub) }}
+                {{ form_row(project_form.category) }}
+                <button class="d-flex bg-white justify-content-center btn rounded-pill color-h3 p-2 col-sm-10 col-md-6 col-lg-3 shadow-none mx-auto">
+                    Modifier
+                </button>
+                {{ form_end(project_form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
