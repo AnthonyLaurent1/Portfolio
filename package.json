@@ -25,9 +25,5 @@
         "@popperjs/core": "^2.11.2",
         "chart.js": "^3.4.1",
         "scrollreveal": "^4.0.9"
-    },
-    "engines": {
-        "node": "v17.4",
-        "yarn": "1.22."
     }
 }
