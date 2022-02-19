@@ -7,7 +7,7 @@
             <h1 class="text-white text-center mt-5 pt-5 display-2 mb-5">Mes projets réalisés</h1>
             <div class="d-flex flex-wrap justify-content-center">
                 {% for project in projects %}
-                   <div class="text-whit card p-5 col-lg-4 zoom col-md-10 col-sm-12 mx-auto mt-3 text-center rounded-pill">
+                   <div class="text-white card p-5 col-lg-4 zoom col-md-10 col-sm-12 mx-auto mt-3 text-center rounded-pill">
                       <div class="card-body color-h3">
                          <h3 class="card-title mb-3">{{ project.name }}</h3>
                             <h5 class="card-title mb-3 fw-light">{{ project.category.name }}</h5>
@@ -16,8 +16,8 @@
                              <a href="{{ project.url }}" class="btn bg-dark text-white">Lien du site</a>
                       </div>
                        {% if app.user %}
-                           <a class="color-h3" href="{{ path('edit_project', { project: project.id }) }}">Modifier</a>
-                           <a class="color-h3" href="{{ path('remove_project', { project: project.id }) }}">Supprimer</a>
+                           <a class="color-h3 btn bg-dark w-50 text-white m-auto mb-4" href="{{ path('edit_project', { project: project.id }) }}">Modifier</a>
+                           <a class="color-h3 btn bg-dark w-50 text-white m-auto" href="{{ path('remove_project', { project: project.id }) }}">Supprimer</a>
                        {% endif %}
                    </div>
                  {% endfor %}
